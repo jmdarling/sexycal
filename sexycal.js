@@ -62,6 +62,10 @@ function buildSexycalStyle() {
     // Create styles.
     var style = document.createElement("style");
     var styles = document.createTextNode(
+        '.sexycal-wrapper td:hover {' +
+            'background-color: #E0E0E0' +
+        '}' +
+        '' +
         '.sexycal-wrapper * {' +
             'font-family: sans-serif;' +
         '}' +
