@@ -1,5 +1,13 @@
 'use strict';
 
+/**
+ * Default sexycal config values.
+ */
+var sexycalDefaults  = {
+
+};
+
+
 window.onload = function() {
     var sexycalInputs = document.getElementsByClassName('sexycal-input');
 
@@ -66,16 +74,24 @@ function buildSexycalStyle() {
             'background-color: #E0E0E0' +
         '}' +
         '' +
+        '.sexycal-wrapper td {' +
+            'text-align: center' +
+        '}' +
+        '' +
         '.sexycal-wrapper * {' +
+            'box-sizing: border-box;' +
             'font-family: sans-serif;' +
         '}' +
         '' +
         '.sexycal-header {' +
             'font-size: 3em;' +
+            'height: 50px;' +
         '}' +
         '' +
         '.sexycal-table {' +
-            'width: 100%;' +
+            'height: 250px;' +
+            'padding: 10px;' +
+            'width: 300px;' +
         '}' +
         '' +
         '.sexycal-wrapper {' +
