@@ -24,25 +24,31 @@ function sexycalDisplay() {
 
 function buildSexycal() {
     // Create wrapping div.
-    var wrapperDiv = document.createElement("div");
-    wrapperDiv.className = "sexycal-wrapper";
+    var wrapperDiv = document.createElement('div');
+    wrapperDiv.className = 'sexycal-wrapper';
 
     // Create styles.
     var style = buildSexycalStyle();
     wrapperDiv.appendChild(style);
 
     // Create header.
-    var header = document.createElement("span");
-    header.className = "sexycal-header";
+    var header = document.createElement('span');
+    header.className = 'sexycal-header';
     header.appendChild(document.createTextNode('January'));
     wrapperDiv.appendChild(header);
+
+    // Create subheader.
+    var subheader = document.createElement('span');
+    subheader.className = 'sexycal-subheader';
+    subheader.appendChild(document.createTextNode('2015'));
+    wrapperDiv.appendChild(subheader);
 
     // Create hr.
     wrapperDiv.appendChild(document.createElement('hr'));
 
     // Create dates table.
     var datesTable = document.createElement('table');
-    datesTable.className = "sexycal-table";
+    datesTable.className = 'sexycal-table';
     var datesTbody = document.createElement('tbody');
 
     var currentTr = document.createElement('tr');
@@ -68,7 +74,7 @@ function buildSexycal() {
 
 function buildSexycalStyle() {
     // Create styles.
-    var style = document.createElement("style");
+    var style = document.createElement('style');
     var styles = document.createTextNode(
         '.sexycal-wrapper td:hover {' +
             'background-color: #E0E0E0' +
@@ -86,6 +92,10 @@ function buildSexycalStyle() {
         '.sexycal-header {' +
             'font-size: 3em;' +
             'height: 50px;' +
+        '}' +
+        '' +
+        '.sexycal-subheader {' +
+            'font-size: 1.5em;' +
         '}' +
         '' +
         '.sexycal-table {' +
